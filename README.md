@@ -1,1 +1,1 @@
-Python projects including web crawler, search tree, user classification, A/B testing.
+Python projects including Web Crawler, Search Tree, User Classification, A/B Testing, Geopanda Data Visualization.
