@@ -1,0 +1,33 @@
+<html>
+  <body>
+    <h1>Welcome!</h1>
+    <img src="temp_derterminants.svg"><br><br>
+    <img src="temp_derterminants.svg?ylabel=Humidity"><br><br>
+    <img src="temp_hourly.svg"><br><br>
+    <p>Enjoy the data.</p>
+    <p><a href="browse.html">click to browse data</a></p>
+    <p><a href="donate.html?from=A">click to donate</a></p>
+      
+    <head>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <script>
+        function subscribe() {
+          var email = prompt("What is your email?", "????");
+
+          $.post({
+            type: "POST",
+            url: "email",
+            data: email,
+            contentType: "application/text; charset=utf-8",
+            dataType: "json"
+          }).done(function(data) {
+            alert(data);
+          }).fail(function(data) {
+            alert("POST failed");
+          });
+        }
+      </script>
+    </head>
+    <button onclick="subscribe()">Subscribe</button>
+  </body>
+</html>
